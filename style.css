@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* 세로 스크롤 허용 */
+    min-height: 100vh;
+}
+
+.head {
+    height: 20px;
+}
+
+.header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.header p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+.explain {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.set-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* 세트 하나 */
+.set {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 450px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.set-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 이미지 박스 */
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.container img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+/* 슬라이더 영역 */
+.controls {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.save-btn {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 30px;
+    font-size: 18px;
+    background: #4B8BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    margin-bottom: 100px;
+}
+
+.save-btn:hover {
+    background: #3A73D9;
+}
+
+/* 모바일: 세트 2개를 세로로 */
+@media (max-width: 768px) {
+    .set-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .set {
+        width: 90%;
+    }
+}
